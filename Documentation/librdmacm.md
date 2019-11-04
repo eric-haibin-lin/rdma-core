@@ -14,7 +14,7 @@ can be used.  This will create the device node named
 
 or you can create it manually
 
-  mknod /dev/infiniband/rdma_cm c 231 255
+    mknod /dev/infiniband/rdma_cm c 231 255
 
 
 # Common issues
@@ -28,7 +28,7 @@ Using multiple interfaces
 
 		sysctl -w net.ipv4.conf.all.arp_ignore=2
 
-	Without this change, it's possible for linux to resopnd to ARP
+        Without this change, it's possible for linux to resopnd to ARP
 	requests on a different interface (IP address) than the IP
 	address carried in the ARP request.  This causes the RDMA stack
 	to incorrectly map the remote IP address to the wrong RDMA
